@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -4113,22 +4113,41 @@ a.text-dark:hover, a.text-dark:focus {
 
 .btn {
   background-color: #00fdc8;
-  color: white;
-  border-radius: 0; }
+  color: #1f1f1f;
+  border-radius: 25px; }
+  .btn:hover {
+    color: #1f1f1f !important; }
+  .btn.btn-sm {
+    padding: 6px 18px;
+    font-size: 1.1rem;
+    border-radius: 50px; }
+  .btn.btn-md {
+    padding: 12px 32px;
+    font-size: 1.25rem;
+    border-radius: 50px; }
   .btn.btn-lg {
-    padding: 14px 26px;
-    font-size: 1.1rem; }
+    padding: 16px 50px;
+    font-size: 1.4rem;
+    border-radius: 50px; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Oswald', sans-serif;
+  padding-top: 70px; }
+
+#main {
+  padding: 40px 0; }
 
 #header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   align-items: center;
-  height: 60px;
-  border-bottom: 1px solid #595957;
+  height: 70px;
+  border-bottom: 1px solid #EDEDED;
+  padding: 0 15px 0 15px;
+  z-index: 999;
   background-color: white;
-  background-image: url(../img/bg.jpg);
   background-size: cover; }
 
 .logo-container .logo {
@@ -4136,20 +4155,32 @@ body {
 
 .main-nav {
   padding: 0;
-  position: relative; }
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  align-items: center;
+  position: relative;
+  margin-left: auto; }
+  @media (max-width: 991.98px) {
+    .main-nav ul {
+      display: none; } }
   .main-nav a {
     color: #1f1f1f;
-    margin-right: 14px;
     flex: 1;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 1.125rem; }
     .main-nav a:last-child {
       margin-right: 0; }
     .main-nav a:hover {
       color: #999; }
+    .main-nav a.icon {
+      color: #00fdc8; }
+    .main-nav a.btn-primary {
+      margin-left: 10px; }
 
 .mobile-nav-toggle {
   justify-self: flex-end;
-  display: none;
   width: 45px;
   height: 45px;
   padding: 5px;
@@ -4166,15 +4197,15 @@ body {
   .mobile-nav-toggle span:after {
     content: "";
     display: block;
-    height: 3px;
-    background-color: #00fdc8;
+    height: 2px;
+    background-color: #1f1f1f;
     position: relative;
-    top: 4px;
+    top: 6px;
     transition: all 300ms ease-in-out; }
   .mobile-nav-toggle span:before {
-    top: 12px; }
+    top: 10px; }
   .mobile-nav-toggle span:after {
-    top: 22px; }
+    top: 20px; }
   .mobile-nav-toggle.is-open span {
     background: transparent; }
   .mobile-nav-toggle.is-open span:before,
@@ -4220,3 +4251,40 @@ body {
       margin-top: 120px; } }
   .slider-text .btn {
     margin-right: 12px; }
+
+#slider {
+  display: flex;
+  align-content: center;
+  height: 80vh;
+  padding: 40px 0;
+  color: white;
+  background-image: url("784c8a16647517dd89bf974c74c0a606.jpg");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat; }
+  @media (max-width: 991.98px) {
+    #slider {
+      height: auto; } }
+  #slider .container {
+    display: flex;
+    align-self: center; }
+    #slider .container h1 {
+      font-size: 6rem; }
+    #slider .container p.lead {
+      font-size: 2rem; }
+    #slider .container .btn {
+      margin-top: 20px; }
+  #slider .right-canvas {
+    top: 0;
+    right: 0;
+    opacity: 0.4;
+    position: absolute;
+    height: 800px;
+    width: 500px;
+    background-image: url("b390476eb0bcab58f4600923cf9dce1b.svg");
+    background-size: 800px;
+    background-position: top right;
+    background-repeat: no-repeat; }
+
+.higbird-container img {
+  max-width: 100%; }
